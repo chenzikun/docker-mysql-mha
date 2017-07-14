@@ -41,19 +41,19 @@
 
   保存容器间的公用环境变量, 如MySQL复制账户repl的账号密码
 
-- employees_db
+- demo_db
 
   `master` 启动时的MySQL初始化脚本
 
-- employees_master
+- demo_master
 
   `master` 主库容器中的配置文件, 日志与库存放位置
 
-- employees_slave_1
+- demo_slave_1
 
   `slave_1` 从库容器中的配置文件, 日志与库存放位置
 
-- employees_share
+- demo_share
 
   容器间的共享数据卷
 
@@ -82,7 +82,7 @@
   5. 根据自定义的MySQL账户密码生成MHA配置文件
   6. masterha_check_ssh检测容器间的SSH正确性
   7. masterha_check_repl检测复制的健康状况
-  8. 启动masterha_manager并将日志写入employees_share中的`mha.log`
+  8. 启动masterha_manager并将日志写入demo_share中的`mha.log`
 
 ### 启动
 
@@ -156,12 +156,3 @@
 3. 本项目仅用于学习MySQL MHA集群, 同时练习Docker的使用
 4. 要使用虚拟IP的话可自行搭配Keepalive, LVS等
 
-## 参考
-
-[MHA Quick Start Guide](https://www.percona.com/blog/2016/09/02/mha-quickstart-guide/)
-
-[MySQL Docker Image](https://hub.docker.com/_/mysql/)
-
-[Two-way link with Docker Compose](https://medium.com/@tristan.claverie/well-there-is-in-fact-a-simpler-solution-than-creating-a-network-do-nothing-at-all-docker-f38e93326134#.l6uupkacv)
-
-[How to configure MySQL master/slave replication with MHA automatic failover](http://www.arborisoft.com/how-to-configure-mysql-masterslave-replication-with-mha-automatic-failover/)
