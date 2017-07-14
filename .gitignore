@@ -1,0 +1,11 @@
+.idea/
+
+# if you remove the above rule, at least ignore the following:
+# MHA Docker example
+demo_master/lib/
+demo_master/log/
+demo_slave*/lib/
+demo_slave*/log/
+demo_share/mha.log
+
+.DS_Store
